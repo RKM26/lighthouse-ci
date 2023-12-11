@@ -22,8 +22,8 @@ module.exports = {
             'total-blocking-time': ['off', {}],
         }
     },
-      upload: {
-        // upload options here
+    upload: {
+        target: 'temporary-public-storage',
       },
       server: {
         // server options here
