@@ -25,7 +25,7 @@ module.exports = {
 
        upload: {
       target: 'lhci',
-      serverBaseUrl: 'https://fine-lies-serve.loca.lt/'
+      serverBaseUrl: 'https://fast-bobcats-build.loca.lt'
     },
       server: {
         // server options here
