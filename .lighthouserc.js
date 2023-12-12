@@ -25,7 +25,7 @@ module.exports = {
 
        upload: {
       target: 'lhci',
-      serverBaseUrl: 'https://ff4a-2405-201-600b-c9a0-c0e-b4ca-ac04-eb53.ngrok.io'
+      serverBaseUrl: 'https://fine-lies-serve.loca.lt/'
     },
       server: {
         // server options here
