@@ -25,7 +25,7 @@ module.exports = {
 
        upload: {
       target: 'lhci',
-      serverBaseUrl: 'https://fast-bobcats-build.loca.lt'
+      serverBaseUrl: 'https://strong-keys-lose.loca.lt'
     },
       server: {
         // server options here
