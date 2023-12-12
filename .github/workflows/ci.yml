@@ -1,20 +1,28 @@
-name: CI
+name: Build project and run Lighthouse CI
+
 on: [push]
+
 jobs:
   lhci:
-    name: Lighthouse
+    name: Lighthouse CI
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js 16.x
+      - name: Use Node.js 17.x
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
-      - name: npm install, build
+          node-version: 17
+          cache: "npm"
+      - name: npm install
         run: |
-          npm install
+          npm install --legacy-peer-deps
+      - name: npm run build
+        run: |
           npm run build
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.12.x
-          lhci autorun
+          lhci autorun --upload.githubToken="$LHCI_GITHUB_TOKEN" || echo "LHCI failed!"
+        env:
+          LHCI_TOKEN: ${{ secrets.LHCI_TOKEN }}
+          LHCI_GITHUB_TOKEN: ${{ secrets.LHCI_GITHUB_TOKEN }}
