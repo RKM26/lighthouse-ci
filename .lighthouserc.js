@@ -22,9 +22,11 @@ module.exports = {
             'total-blocking-time': ['off', {}],
         }
     },
-    upload: {
-        target: 'temporary-public-storage',
-      },
+
+       upload: {
+      target: 'lhci',
+      serverBaseUrl: 'https://ff4a-2405-201-600b-c9a0-c0e-b4ca-ac04-eb53.ngrok.io'
+    },
       server: {
         // server options here
       },
