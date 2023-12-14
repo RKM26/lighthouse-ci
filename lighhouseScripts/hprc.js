@@ -1,10 +1,7 @@
 module.exports = {
     ci: {
       collect: {
-        // collect options here
-        settings : {
-            
-        }
+        url : 'https://www.marriott.com/default.mi'
       },
       assert: {
         "preset": "lighthouse:recommended", // Change this to "lighthouse:recommended" when we move to a PWA in the future
