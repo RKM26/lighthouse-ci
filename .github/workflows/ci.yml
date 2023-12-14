@@ -22,7 +22,7 @@ jobs:
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.12.x
-          lhci autorun --upload.githubToken="$LHCI_GITHUB_TOKEN" || echo "LHCI failed!" --config=./lighhouseScripts/"$LHCI_SCRIPT".js
+          lhci autorun --upload.githubToken="$LHCI_GITHUB_TOKEN" --config=./lighhouseScripts/bookrc.js || echo "LHCI failed!"
         env:
           LHCI_TOKEN: ${{ secrets.LHCI_TOKEN }}
           LHCI_GITHUB_TOKEN: ${{ secrets.LHCI_GITHUB_TOKEN }}
