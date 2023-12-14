@@ -26,3 +26,4 @@ jobs:
         env:
           LHCI_TOKEN: ${{ secrets.LHCI_TOKEN }}
           LHCI_GITHUB_TOKEN: ${{ secrets.LHCI_GITHUB_TOKEN }}
+          LHCI_SCRIPT: ${{ secrets.LHCI_SCRIPT }}
