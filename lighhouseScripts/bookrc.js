@@ -2,6 +2,9 @@ module.exports = {
     ci: {
       collect: {
         // collect options here
+        settings : {
+            
+        }
       },
       assert: {
         "preset": "lighthouse:recommended", // Change this to "lighthouse:recommended" when we move to a PWA in the future
@@ -22,10 +25,8 @@ module.exports = {
             'total-blocking-time': ['off', {}],
         }
     },
-
        upload: {
-      target: 'lhci',
-      serverBaseUrl: 'https://strong-keys-lose.loca.lt'
+        target: 'temporary-public-storage',
     },
       server: {
         // server options here

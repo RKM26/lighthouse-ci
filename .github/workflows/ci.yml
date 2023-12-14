@@ -5,7 +5,7 @@ on: [push]
 jobs:
   lhci:
     name: Lighthouse CI
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest//self-hosted
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js 17.x
@@ -22,7 +22,7 @@ jobs:
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.12.x
-          lhci autorun --upload.githubToken="$LHCI_GITHUB_TOKEN" || echo "LHCI failed!"
+          lhci autorun --upload.githubToken="$LHCI_GITHUB_TOKEN" || echo "LHCI failed!" --config=./lighhouseScripts/"$LHCI_SCRIPT".js
         env:
           LHCI_TOKEN: ${{ secrets.LHCI_TOKEN }}
           LHCI_GITHUB_TOKEN: ${{ secrets.LHCI_GITHUB_TOKEN }}
